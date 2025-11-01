@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Kids - Modern Kids Clothing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>/* === URBAN KIDS BRAND STYLES === */
+:root {
+    --charcoal: #2F3645;
+    --off-white: #F5F5F5;
+    --light-grey: #E0E0E0;
+    --mustard: #E6AF2E;
+    --brick: #A8323A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--off-white);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--charcoal);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--mustard);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.icon {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--mustard);
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    height: 70vh;
+    background: linear-gradient(rgba(47, 54, 69, 0.4), rgba(47, 54, 69, 0.4)), url('assets/images/hero image.jpeg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--mustard);
+    color: var(--charcoal);
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+/* Shop by Age Section */
+.shop-by-age {
+    padding: 80px 0;
+    background-color: var(--off-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.shop-by-age h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--charcoal);
+}
+
+.age-categories {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.age-category {
+    text-align: center;
+}
+
+.age-circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    transition: transform 0.3s ease;
+}
+
+.age-circle:hover {
+    transform: scale(1.05);
+}
+
+.age-category p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--charcoal);
+}
+
+.age-category span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #666;
+}
+/* Curated Collections Section */
+.collections {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.collections h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--charcoal);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.collection-item {
+    height: 300px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.playground-edit {
+    background-color: var(--brick);
+}
+
+.city-explorer {
+    background-color: var(--mustard);
+}
+
+.collection-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+}
+/* Bestsellers Section */
+.bestsellers {
+    padding: 80px 0;
+    background-color: var(--off-white);
+}
+
+.bestsellers h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--charcoal);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--light-grey);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--brick);
+}
+/* Footer */
+.footer {
+    background-color: var(--charcoal);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--mustard);
+}
+
+.footer-section h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--mustard);
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.newsletter-form button {
+    background-color: var(--mustard);
+    color: var(--charcoal);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #d4a127;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        display: none; /* We'll add mobile menu later */
+    }
+    
+    .hero {
+        height: 60vh;
+        margin-top: 70px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .age-categories {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .shop-by-age h2,
+    .collections h2,
+    .bestsellers h2 {
+        font-size: 2rem;
+    }
+    
+    .age-circle {
+        width: 120px;
+        height: 120px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">URBAN KIDS</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <span class="icon">🔍</span>
+                <span class="icon">👤</span>
+                <span class="icon">❤️</span>
+                <span class="icon">🛒</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>City-Proof Style for Little Adventures</h1>
+            <a href="#" class="cta-button">SHOP NEW COLLECTION</a>
+        </div>
+    </section>
+        <!-- Shop by Age Section -->
+    <section class="shop-by-age">
+        <div class="container">
+            <h2>FIND THEIR FIT</h2>
+            <div class="age-categories">
+                <div class="age-category">
+                    <div class="age-circle"></div>
+                    <p>BABY<br><span>(0-24M)</span></p>
+                </div>
+                <div class="age-category">
+                    <div class="age-circle"></div>
+                    <p>TODDLER<br><span>(2T-4T)</span></p>
+                </div>
+                <div class="age-category">
+                    <div class="age-circle"></div>
+                    <p>KIDS<br><span>(5-12)</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Curated Collections Section -->
+    <section class="collections">
+        <div class="container">
+            <h2>CURATED COLLECTIONS</h2>
+            <div class="collection-grid">
+                <div class="collection-item playground-edit">
+                    <div class="collection-content">
+                        <h3>THE PLAYGROUND EDIT</h3>
+                    </div>
+                </div>
+                <div class="collection-item city-explorer">
+                    <div class="collection-content">
+                        <h3>CITY EXPLORER</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Bestsellers Section -->
+    <section class="bestsellers">
+        <div class="container">
+            <h2>URBAN FAVORITES</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Classic Denim Jacket</h3>
+                    <p class="price">$34.99</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Urban Explorer Pants</h3>
+                    <p class="price">$29.99</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>City Play Tee</h3>
+                    <p class="price">$24.99</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Adventure Backpack</h3>
+                    <p class="price">$27.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>URBAN KIDS</h3>
+                    <p>Modern style for city life. Quality clothing for little adventurers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>NEWSLETTER</h4>
+                    <p>Subscribe for updates and special offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Urban Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- More sections will be added next -->
+</body>
+</html>
